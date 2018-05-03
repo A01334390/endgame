@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cargar JSON</title>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel='stylesheet' type='text/css' href="css/style.css">
+    <script src="js/cytoscape.js"></script>
+</head>
+
+<body>
+    <div class="container" id='chooser'>
+        <div class="row">
+            <div class="one-half column" style="margin-top: 15%">
+                <h1 style="color:#9C225D">Carga tu JSON para convertir</h1>
+                <p>En esta ventana deberas cargar un archivo preparado para convertir de λ-NFA a DFA</p>
+            </div>
+        </div>
+        <hr>
+        <div id="holder">
+            Arrastra tu archivo aqui
+        </div>
+        <hr>
+        <button type='submit' id='deploy'>Generar la grafica</button>
+        <br>
+    </div>
+    <div id='info'>
+
+    </div>
+    <div id='cy'>
+
+    </div>
+    <script>
+        // You can also require other files to run in this process
+        var $ = require('jquery')
+        require('./js/renderer.js')
+        // See dropped files
+        document.addEventListener('drop', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            for (let f of e.dataTransfer.files) {
+                $('#holder').empty()
+                $('#holder').append(f.path)
+            }
+        });
+        document.addEventListener('dragover', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    </script>
+    <!-- <script src="js/code.js"></script> -->
+    <div id='footer'></div>
+</body>
+
+</html>

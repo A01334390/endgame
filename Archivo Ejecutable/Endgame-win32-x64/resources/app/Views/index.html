@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Matematicas Computacionales</title>
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <style>
+    #footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10px;
+      /* Height of the footer */
+      background: #9C225D;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 15%">
+        <h4 style='color:#9C225D'>Matematicas Computacionales</h4>
+        <p>Este es un proyecto creado por Fernando Martin Garcia Del Angel</p>
+        <p>Puedes ver este y otros proyectos en
+          <a style="color:#9C225D" href="https://www.github.com/A01334390">github</a>.</p>
+        Estamos usando Node.js version:
+        <script>
+          document.write(process.versions.node)
+        </script>, Chromium:
+        <script>
+          document.write(process.versions.chrome)
+        </script>, y Electron:
+        <script>
+          document.write(process.versions.electron)
+        </script>.
+        <hr>
+        <button id="open-loader-window"> Iniciar la aplicacion</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let $ = require('jquery')
+    //Move to the next window
+    $('#open-loader-window').on('click', () => {
+      window.location.href = 'loader.html'
+    })
+  </script>
+  <div id='footer'></div>
+</body>
+
+</html>

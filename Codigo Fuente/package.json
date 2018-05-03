@@ -1,0 +1,33 @@
+{
+  "name": "Endgame",
+  "version": "1.0.0",
+  "description": "A minimal Electron application that includes the l-NFA to DFA converter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "AFD",
+    "NFD",
+    "Math",
+    "Computational Maths"
+  ],
+  "author": "A01334390",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "cytoscape": "^3.2.11",
+    "fs": "0.0.1-security",
+    "hashmap": "^2.3.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "npm": "^6.0.0",
+    "remote": "^0.2.6"
+  }
+}
